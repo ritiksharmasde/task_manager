@@ -8,6 +8,7 @@ const authRoutes = require("./routes/auth.routes");
 const projectRoutes = require("./routes/project.routes");
 
 const app = express();
+console.log("MANUAL CORS VERSION LOADED");
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
