@@ -9,7 +9,13 @@ const projectRoutes = require("./routes/project.routes");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://welcoming-warmth-production-de38.up.railway.app"
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 app.get("/", (req, res) => {
